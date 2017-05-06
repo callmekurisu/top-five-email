@@ -20,3 +20,7 @@ def popProv(email):
 #a list from a dataframe can be used as an arg for the function
 
 popProv(list(ecom['Email']))
+
+#can be shortened to one line lambda
+
+ecom['Email'].apply(lambda email: email.split('@')[1]).value_counts().head(5)
