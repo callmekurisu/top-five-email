@@ -16,3 +16,7 @@ def popProv(email):
         newList.append(domain.split('@')[1])
     newDF=pd.DataFrame(newList)
     return newDF[0].value_counts().head(5)
+
+#a list from a dataframe can be used as an arg for the function
+
+popProv(list(ecom['Email']))
